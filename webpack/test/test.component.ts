@@ -1,13 +1,12 @@
-import { app } from '../app';
+import {Component} from 'ng-metadata/core';
 
-export class TestComponent {
-  public controller: any;
-  public template: string;
-
-  constructor() {
-    this.template = require('./test.component.html');
+@Component({
+  selector: 'test-component',
+  template: require('./test.component.html'),
+  legacy: {
+    transclude: true
   }
-
+})
+export class TestComponent {
+  constructor() {}
 }
-
-app.component('testComponent', new TestComponent());

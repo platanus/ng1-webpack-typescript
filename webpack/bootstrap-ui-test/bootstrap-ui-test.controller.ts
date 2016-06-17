@@ -1,8 +1,6 @@
-import { app } from '../app';
-
 export class BootstrapUITestController {
   testArray
-
+  static $inject = ['$uibModal'];
   constructor(private $uibModal: ng.ui.bootstrap.IModalService) {
 
     this.testArray = [
@@ -43,5 +41,3 @@ export class BootstrapUITestController {
     });
   }
 }
-
-app.controller('bootstrapUITestController', BootstrapUITestController);
